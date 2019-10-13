@@ -26,6 +26,8 @@ SECRET_KEY = '9ders0cigvd%2hsu^4^$62fa8y&6)md744d!efr(_!a1h%0k)4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = DEBUG
+
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
