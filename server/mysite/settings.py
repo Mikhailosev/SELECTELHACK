@@ -26,8 +26,9 @@ SECRET_KEY = '9ders0cigvd%2hsu^4^$62fa8y&6)md744d!efr(_!a1h%0k)4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '185.91.55.98', '.pythonanywhere.com']
+CORS_ORIGIN_ALLOW_ALL = True
 
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -53,13 +54,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',  
     'django.middleware.common.CommonMiddleware',  
-]
-
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://185.91.55.98:3000'
 ]
 
 ROOT_URLCONF = 'mysite.urls'
