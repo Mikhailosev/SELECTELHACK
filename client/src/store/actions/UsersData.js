@@ -1,4 +1,4 @@
-import axios from "../../axios-intance";
+import axios from "axios";
 import * as actionTypes from "./actionTypes";
 // Reducer functions
 export const get_tasks = () => {
@@ -68,9 +68,15 @@ export const loginf = data => {
 export const login = (email, password) => {
   return (dispatch, getState) => {
     let data = { email: email, password: password };
-    axios.post("/user/login/", data).then(res => {
-      console.log(data);
-    });
+    axios
+      .post("http://185.91.55.98:8000/user/login/", data, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
+      })
+      .then(res => {
+        console.log(data);
+      });
   };
 };
 export const finish_task = () => {
