@@ -6,73 +6,240 @@ export default class Shop extends Component {
   render() {
     return (
       <div>
-        <Carousel>
-          <div>
-            <img
-              className="image is-128x128"
-              src="https://s2.cdn.teleprogramma.pro/wp-content/uploads/2018/06/54aedcb5033553e2342843bf8b94e8aa.jpg"
-            />
-            <p className="legend">Legend 1</p>
-          </div>
-          <div>
-            <img
-              className="image is-128x128"
-              src="https://s2.cdn.teleprogramma.pro/wp-content/uploads/2018/06/54aedcb5033553e2342843bf8b94e8aa.jpg"
-            />
-            <p className="legend">Legend 2</p>
-          </div>
-          <div>
-            <img
-              className="image is-128x128"
-              src="https://s2.cdn.teleprogramma.pro/wp-content/uploads/2018/06/54aedcb5033553e2342843bf8b94e8aa.jpg"
-            />
-            <p className="legend">Legend 3</p>
-          </div>
-        </Carousel>
-        <div class="card-content">
-          <div class="content">
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-large" type="search" />
-              <span class="icon is-medium is-left">
-                <i class="fa fa-search"></i>
-              </span>
-              <span class="icon is-medium is-right">
-                <i class="fa fa-empire"></i>
-              </span>
-            </div>
-          </div>
+        <div
+          style={{
+            display: "flex",
+            backgroundColor: "#dd1212",
+            width: "100vw",
+            alignItems: "center"
+          }}
+        >
+          <img
+            className="image is-128x128"
+            style={{ borderRadius: "50%", margin: "2rem" }}
+            src="https://pbs.twimg.com/profile_images/806143150414819329/FoOizLFS.jpg"
+          />
+          <h1 style={{ color: "white" }} class="title tasks__title is-1">
+            Магазин
+          </h1>
         </div>
-        <div class="row columns">
-          <NavLink
-            to="/singleItem"
-            style={{
-              textDecoration: "none"
-            }}
-            class="column is-one-third"
-          >
-            <div class="card large">
-              <div class="card-image">
-                <figure class="image">
-                  <img
-                    src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
-                    alt="Image"
+        <div className="container">
+          <div id="flow">
+            <span className="flow-1"></span>
+            <span className="flow-2"></span>
+            <span className="flow-3"></span>
+          </div>
+          <div className="section">
+            <div className="box">
+              <div className="field has-addons">
+                <div className="control is-expanded">
+                  <input
+                    className="input has-text-centered"
+                    type="search"
+                    placeholder="» » » » » » find me « « « « « «"
                   />
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4 no-padding">Название товара</p>
-                    <p>
-                      <span class="title is-6">
-                        <a href="http://twitter.com/#">Цена</a>
-                      </span>
-                    </p>
-                  </div>
+                </div>
+                <div className="control">
+                  <a className="button is-info">Search</a>
                 </div>
               </div>
             </div>
-          </NavLink>
+            <div className="row columns is-multiline">
+              <NavLink
+                onClick={() => this.unCheck()}
+                className="column is-one-third"
+                style={{ textDecoration: "none" }}
+                to="/singleItem"
+              >
+                <div className="card large">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        alt="Image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-left">
+                        <figure className="image is-96x96">
+                          <img
+                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
+                            alt="Image"
+                          />
+                        </figure>
+                      </div>
+                      <div className="media-content">
+                        <p className="title is-4 no-padding">Okinami</p>
+                        <p>
+                          <span className="title is-6">
+                            <a href="http://twitter.com/#">@twitterid</a>
+                          </span>
+                        </p>
+                        <p className="subtitle is-6">Lead Developer</p>
+                      </div>
+                    </div>
+                    <div className="content">
+                      The Beast stumbled in the dark for it could no longer see
+                      the path. It started to fracture and weaken, trying to
+                      reshape itself into the form of metal. Even the witches
+                      would no longer lay eyes upon it, for it had become
+                      hideous and twisted.
+                      <div className="background-icon">
+                        <span className="icon-twitter"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </NavLink>
+
+              <NavLink
+                onClick={() => this.unCheck()}
+                className="column is-one-third"
+                style={{ textDecoration: "none" }}
+                to="/singleItem"
+              >
+                <div className="card large">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        alt="Image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-left">
+                        <figure className="image is-96x96">
+                          <img
+                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
+                            alt="Image"
+                          />
+                        </figure>
+                      </div>
+                      <div className="media-content">
+                        <p className="title is-4 no-padding">Okinami</p>
+                        <p>
+                          <span className="title is-6">
+                            <a href="http://twitter.com/#">@twitterid</a>
+                          </span>
+                        </p>
+                        <p className="subtitle is-6">Lead Developer</p>
+                      </div>
+                    </div>
+                    <div className="content">
+                      The Beast stumbled in the dark for it could no longer see
+                      the path. It started to fracture and weaken, trying to
+                      reshape itself into the form of metal. Even the witches
+                      would no longer lay eyes upon it, for it had become
+                      hideous and twisted.
+                      <div className="background-icon">
+                        <span className="icon-twitter"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </NavLink>
+              <NavLink
+                onClick={() => this.unCheck()}
+                className="column is-one-third"
+                style={{ textDecoration: "none" }}
+                to="/singleItem"
+              >
+                <div className="card large">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        alt="Image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-left">
+                        <figure className="image is-96x96">
+                          <img
+                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
+                            alt="Image"
+                          />
+                        </figure>
+                      </div>
+                      <div className="media-content">
+                        <p className="title is-4 no-padding">Okinami</p>
+                        <p>
+                          <span className="title is-6">
+                            <a href="http://twitter.com/#">@twitterid</a>
+                          </span>
+                        </p>
+                        <p className="subtitle is-6">Lead Developer</p>
+                      </div>
+                    </div>
+                    <div className="content">
+                      The Beast stumbled in the dark for it could no longer see
+                      the path. It started to fracture and weaken, trying to
+                      reshape itself into the form of metal. Even the witches
+                      would no longer lay eyes upon it, for it had become
+                      hideous and twisted.
+                      <div className="background-icon">
+                        <span className="icon-twitter"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </NavLink>
+              <NavLink
+                onClick={() => this.unCheck()}
+                className="column is-one-third"
+                style={{ textDecoration: "none" }}
+                to="/singleItem"
+              >
+                <div className="card large">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img
+                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        alt="Image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-left">
+                        <figure className="image is-96x96">
+                          <img
+                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
+                            alt="Image"
+                          />
+                        </figure>
+                      </div>
+                      <div className="media-content">
+                        <p className="title is-4 no-padding">Okinami</p>
+                        <p>
+                          <span className="title is-6">
+                            <a href="http://twitter.com/#">@twitterid</a>
+                          </span>
+                        </p>
+                        <p className="subtitle is-6">Lead Developer</p>
+                      </div>
+                    </div>
+                    <div className="content">
+                      The Beast stumbled in the dark for it could no longer see
+                      the path. It started to fracture and weaken, trying to
+                      reshape itself into the form of metal. Even the witches
+                      would no longer lay eyes upon it, for it had become
+                      hideous and twisted.
+                      <div className="background-icon">
+                        <span className="icon-twitter"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </NavLink>
+            </div>
+          </div>
         </div>
       </div>
     );

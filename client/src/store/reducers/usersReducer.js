@@ -3,7 +3,8 @@ import { updateObject } from "../utility";
 const initialState = {
   user: null,
   comments: null,
-  selectedCourse: null
+  selectedCourse: null,
+  token: null
 };
 // Reducer cases
 const reducer = (state = initialState, action) => {
@@ -12,6 +13,8 @@ const reducer = (state = initialState, action) => {
       return updateObject(state, { user: action.users });
     case actionTypes.SELECT_COURSE:
       return updateObject(state, { selectedCourse: action.course });
+    case actionTypes.LOGIN:
+      return updateObject(state, { token: action.token });
     default:
       return state;
   }

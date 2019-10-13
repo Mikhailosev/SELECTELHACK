@@ -4,7 +4,7 @@ import Tasks from "./components/Tasks";
 import Task from "./components/Task";
 import Login from "./components/Login";
 import styled from "styled-components";
-
+import "font-awesome/css/font-awesome.min.css";
 import CurrentTasks from "./components/CurrentTasks";
 import Shop from "./components/Shop";
 import PersonalPage from "./components/PersonalPage";
@@ -13,7 +13,7 @@ import Education from "./components/Education";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { loggedIn: true };
+    this.state = { loggedIn: false };
   }
 
   unCheck() {
@@ -56,7 +56,10 @@ class App extends Component {
                       style={{ textDecoration: "none" }}
                       to="/mytasks"
                     >
-                      <span>01</span>Текущие задачи
+                      <span>
+                        <i class="fa fa-tasks"></i>
+                      </span>
+                      Текущие задачи
                     </NavLink>
                   </li>
                   <li className="navigation__item">
@@ -66,7 +69,10 @@ class App extends Component {
                       style={{ textDecoration: "none" }}
                       to="/education"
                     >
-                      <span>02</span>Обучение
+                      <span>
+                        <i class="fa fa-graduation-cap"></i>
+                      </span>
+                      Обучение
                     </NavLink>
                   </li>
                   <li className="navigation__item">
@@ -76,7 +82,10 @@ class App extends Component {
                       style={{ textDecoration: "none" }}
                       to="/user"
                     >
-                      <span>03</span>Личная страница
+                      <span>
+                        <i class="fa fa-address-card"></i>
+                      </span>
+                      Личная страница
                     </NavLink>
                   </li>
                   <li className="navigation__item">
@@ -86,7 +95,10 @@ class App extends Component {
                       style={{ textDecoration: "none" }}
                       to="/shop"
                     >
-                      <span>04</span>Магазин
+                      <span>
+                        <i class="fa fa-shopping-cart"></i>{" "}
+                      </span>
+                      Магазин
                     </NavLink>
                   </li>
                   <li className="navigation__item">
@@ -96,7 +108,10 @@ class App extends Component {
                       style={{ textDecoration: "none" }}
                       to="/tasks"
                     >
-                      <span>05</span>Проверять задания
+                      <span>
+                        <i class="fa fa-check-square"></i>
+                      </span>
+                      Проверять задания
                     </NavLink>
                   </li>
                 </ul>

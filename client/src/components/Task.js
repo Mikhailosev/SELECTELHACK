@@ -4,13 +4,23 @@ export default class Task extends Component {
   render() {
     return (
       <div>
-        <section class="hero is-medium task__header  is-bold">
-          <div class="hero-body">
-            <div class="container has-text-centered">
-              <h1 class="task__header-text  title">НАЗВАНИЕ ОТЧЕТА</h1>
-            </div>
-          </div>
-        </section>
+        <div
+          style={{
+            display: "flex",
+            backgroundColor: "#dd1212",
+            width: "100vw",
+            alignItems: "center"
+          }}
+        >
+          <img
+            className="image is-128x128"
+            style={{ borderRadius: "50%", margin: "2rem" }}
+            src="https://pbs.twimg.com/profile_images/806143150414819329/FoOizLFS.jpg"
+          />
+          <h1 style={{ color: "white" }} class="title tasks__title is-1">
+            ТИТУЛ ОТЧЕТА
+          </h1>
+        </div>
         <div class="container">
           <section class="articles">
             <div class="column is-8 is-offset-2">

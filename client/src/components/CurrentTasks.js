@@ -10,19 +10,22 @@ export default class CurrentTasks extends Component {
   render() {
     return (
       <div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            className="image is-64x64"
-            src="https://psv4.userapi.com/c856220/u8733721/docs/d11/6842174d9ce6/imgonline-com-ua-GIF-Animation-JainnLUiC4odGLo.gif?extra=E_C9HMmUHrW0YlOQ7HsKlEFKysQNMSAaLzvoRKuDp8P7Dwq0Owekf_aH4fh5rXmgSyEHXaYp0w0p-n2BQs-l_Wd5rVwFOUrX1R7fszln7iA8-elClP8J-Yuc54Ir6Z8vNTz2wljYn0LBeS3c6iiWgamQ6g"
-          />
-          <p className="loading">Loading...</p>
-        </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            backgroundColor: "#dd1212",
+            width: "100vw",
+            alignItems: "center"
+          }}
+        >
           <img
             className="image is-128x128"
+            style={{ borderRadius: "50%", margin: "2rem" }}
             src="https://pbs.twimg.com/profile_images/806143150414819329/FoOizLFS.jpg"
           />
-          <h1 class="title tasks__title is-1">Текущие задачи </h1>
+          <h1 style={{ color: "white" }} class="title tasks__title is-1">
+            Текущие задачи
+          </h1>
         </div>
 
         <div className="columns is-fullheight is-desktop">

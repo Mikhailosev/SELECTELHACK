@@ -5,9 +5,12 @@ import * as actionCreators from "../store/actions/index.js";
 class EducationSubjects extends Component {
   render() {
     return (
-      <div className="column is-3 ">
-        <aside className="menu is-hidden-mobile">
-          <p className="menu-label">Курс</p>
+      <div className="column is-3">
+        <aside
+          style={{ backgroundColor: "white" }}
+          className="menu is-size-5-widescreen is-hidden-mobile"
+        >
+          <p className="menu-label ">Курс</p>
           <ul className="menu-list">
             <li>
               <a

@@ -7,6 +7,7 @@ export {
   get_likes,
   get_dislikes,
   post_post,
+  login,
   post_like,
   post_dislike,
   post_comment,

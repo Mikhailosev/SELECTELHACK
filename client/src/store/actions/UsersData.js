@@ -59,10 +59,24 @@ export const post_course = () => {
     });
   };
 };
+export const loginf = data => {
+  return {
+    type: actionTypes.GET_TASKS,
+    token: data
+  };
+};
+export const login = (email, password) => {
+  return (dispatch, getState) => {
+    let data = { email: email, password: password };
+    axios.post("/user/login/", data).then(res => {
+      console.log(data);
+    });
+  };
+};
 export const finish_task = () => {
   return (dispatch, getState) => {
     axios.post("/post.json").then(res => {
-      console.log(res.data);
+      dispatch(select_coursef(res));
     });
   };
 };

@@ -1,6 +1,28 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-export default class Login extends Component {
+import { connect } from "react-redux";
+import * as actionCreators from "../store/actions/index.js";
+
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: null,
+      password: null
+    };
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.login(this.state.email, this.state.password);
+  }
+  handleEmail(e) {
+    this.setState({ email: e.target.value });
+    console.log(this.state.email);
+  }
+  handlePassword(e) {
+    this.setState({ password: e.target.value });
+    console.log(this.state.password);
+  }
   render() {
     return (
       <section className="hero login__hero is-fullheight">
@@ -10,11 +32,15 @@ export default class Login extends Component {
               <div className="box">
                 <figure className="avatar">
                   <img
-                    classNameName="image is-128x128"
+                    className="image is-128x128"
                     src="https://otzyvmarketing.ru/media/product/image_875.png"
                   />
                 </figure>
-                <form>
+                <form
+                  onSubmit={event => {
+                    this.handleSubmit(event);
+                  }}
+                >
                   <div className="field">
                     <div className="control">
                       <input
@@ -22,6 +48,9 @@ export default class Login extends Component {
                         type="email"
                         placeholder="Email"
                         autofocus=""
+                        onChange={e => {
+                          this.handleEmail(e);
+                        }}
                       />
                     </div>
                   </div>
@@ -32,14 +61,15 @@ export default class Login extends Component {
                         className="input is-large"
                         type="password"
                         placeholder="Пароль"
+                        onChange={e => {
+                          this.handlePassword(e);
+                        }}
                       />
                     </div>
                   </div>
-                  <Link to="/tasks">
-                    <button className="button login__button is-block is-large is-fullwidth">
-                      Войти <i className="fa fa-sign-in" aria-hidden="true"></i>
-                    </button>
-                  </Link>
+                  <button className="button login__button is-block is-large is-fullwidth">
+                    Войти <i className="fa fa-sign-in" aria-hidden="true"></i>
+                  </button>
                 </form>
               </div>
             </div>
@@ -49,3 +79,20 @@ export default class Login extends Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    storedUser: state.users.user,
+    token: state.users.token
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    login: (email, password) => dispatch(actionCreators.login(email, password))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);

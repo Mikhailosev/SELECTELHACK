@@ -16,3 +16,4 @@ export const FINISH_TASK = "FINISH_TASK";
 export const FINISH_UNIT = "FINISH_UNIT";
 export const CHANGE_STATUS = "CHANGE_STATUS";
 export const SELECT_COURSE = "SELECT_COURSE";
+export const LOGIN = "LOGIN";
