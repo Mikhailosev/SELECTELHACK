@@ -72,7 +72,8 @@ export const login = (email, password) => {
     axios
       .post("http://185.91.55.98:8000/user/login/", data, {
         headers: {
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "*",
+          "Content-type": "application/json"
         }
       })
       .then(res => {
