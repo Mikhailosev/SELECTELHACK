@@ -8,5 +8,19 @@
 @import "base/utilities";
 
 @import "layout/navigation";
+@import "components/tasks";
+@import "components/login";
+@import "components/task";
+@import "components/card";
+@import "components/singleItem";
+@import "components/personal";
+@import "components/loading";
+@import "components/background";
 
-@import "pages/home";
+.tox-notifications-container {
+  display: none !important;
+}
+
+input[type="file"] {
+  display: none;
+}

@@ -1,0 +1,18 @@
+.cardContent::-webkit-scrollbar {
+  display: none;
+}
+.progress::-webkit-progress-value {
+  background-color: $color-primary;
+}
+
+.progress::-moz-progress-bar {
+  background-color: $color-primary;
+}
+
+.progress::-ms-fill {
+  background-color: $color-primary;
+}
+
+.progress:indeterminate {
+  background-image: linear-gradient(to right, #00d1b2 30%, #dbdbdb 30%);
+}

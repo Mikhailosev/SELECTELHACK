@@ -1,0 +1,10 @@
+.login__hero {
+  background-color: $color-primary;
+}
+.login__button {
+  background-color: $color-secondary-light;
+  color: white;
+  &:hover {
+    color: white;
+  }
+}

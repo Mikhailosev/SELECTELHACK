@@ -1,0 +1,19 @@
+.tasks {
+  &__title {
+    color: $color-secondary-light;
+  }
+}
+.article {
+  &__main {
+    border-radius: 3px;
+    border: 1px solid $color-primary !important;
+    padding: 1rem;
+    margin-top: 3rem !important;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  &__button {
+    background-color: $color-primary;
+    color: white;
+  }
+}

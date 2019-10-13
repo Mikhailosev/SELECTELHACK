@@ -1,0 +1,8 @@
+.task {
+  &__header {
+    background-color: $color-primary;
+    &-text {
+      color: white;
+    }
+  }
+}
