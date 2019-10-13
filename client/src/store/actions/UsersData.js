@@ -69,13 +69,14 @@ export const login = (email, password) => {
   return (dispatch, getState) => {
     let data = { email: email, password: password };
     console.log(data);
-    axios
-      .post("http://185.91.55.98:8000/user/login/", data, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-type": "application/json"
-        }
-      })
+    fetch("http://185.91.55.98:8000/user/login/", {
+      method: "POST", // или 'PUT'
+      body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json"
+      }
+    })
       .then(res => {
         console.log(res.data);
       })
