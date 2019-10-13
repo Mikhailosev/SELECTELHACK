@@ -53,9 +53,18 @@ class Course(models.Model):
         verbose_name_plural = verbose_name + 'ы'
 
 class Problem(models.Model):
+    PROBLEM_CHOICES = (
+        ('first_choice', 'Первый вариант'),
+        ('second_choice', 'Второй вариант')
+    )
     title = models.CharField(max_length=200, default='', verbose_name='Название')
     course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='Курс')
     text = models.TextField(verbose_name='Описание')
+    first_option = models.TextField(verbose_name='Первый вариант ответа', default='')
+    second_option = models.TextField(verbose_name='Второй вариант ответа', default='')
+    third_option = models.TextField(verbose_name='Третий вариант ответа', default='')
+    fourth_option = models.TextField(verbose_name='Четвертый вариант ответа', default='')
+    correct_option = models.CharField(max_length=50, choices=PROBLEM_CHOICES, default='first_choice')
     task_difficulty = models.SmallIntegerField(verbose_name='Сложность', max_length=10, default=0)
     published_date = models.DateTimeField(blank=True, null=True, verbose_name='Дата публикации')
 

@@ -1,5 +1,3 @@
-# from django.core.urlresolvers import NoReverseMatch
-
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -13,7 +11,7 @@ from .serializers import UserSerializer
 from django.contrib.auth.decorators import login_required
 import jwt
 from rest_framework.views import APIView
-from django.http import HttpResponseForbidden, Http404
+from django.http import HttpResponseForbidden, Http404, HttpResponseBadRequest
 from rest_framework.permissions import IsAuthenticated
 
 @api_view(['POST'])
@@ -55,3 +53,31 @@ class UserInfoViewSet(APIView):
     def get(self, request):
         serialize = UserSerializer(request.user)
         return Response(serialize.data, status=status.HTTP_200_OK)
+
+class UpdateAvatar(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request):
+        try:
+            user = request.user
+            user.photo = request.data['photo']
+            user.save()
+            res = {'success': 'image uploaded'}
+            return Response(res, status.HTTP_200_OK)
+        except Exception as e:
+            res = {'error': 'cannot upload image'}
+            return Response(res, status.HTTP_400_BAD_REQUEST)
+
+class MinusMoney(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request):
+        try:
+            user = request.user
+            user.sterling -= request.data['price']
+            user.save()
+            res = {'success': 'balance updated'}
+            return Response(res, status.HTTP_200_OK)
+        except Exception as e:
+            res = {'error': 'cannot balance update'}
+            return Response(res, status.HTTP_400_BAD_REQUEST)
