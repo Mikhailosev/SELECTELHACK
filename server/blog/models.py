@@ -40,3 +40,26 @@ class Task(models.Model):
     class Meta(object):
         verbose_name = 'Задача'
         verbose_name_plural = verbose_name[:len(verbose_name) - 1] + 'и'
+
+class Course(models.Model):
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+
+class Problem(models.Model):
+    title = models.CharField(max_length=200, default='')
+    topic = models.CharField(max_length=200)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='Курс')
+    text = models.TextField(verbose_name='Описание')
+    task_difficulty = models.SmallIntegerField(verbose_name='Сложность', max_length=10, default=0)
+    published_date = models.DateTimeField(blank=True, null=True)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
+
+    class Meta(object):
+        verbose_name = 'Вопрос'
+        verbose_name_plural = verbose_name + 'ы'

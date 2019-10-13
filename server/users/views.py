@@ -9,8 +9,12 @@ from rest_framework_jwt.utils import jwt_payload_handler
 from django.contrib.auth.signals import user_logged_in
 from .models import User
 from rest_framework import status
+from .serializers import UserSerializer
+from django.contrib.auth.decorators import login_required
 import jwt
+from rest_framework.views import APIView
 from django.http import HttpResponseForbidden, Http404
+from rest_framework.permissions import IsAuthenticated
 
 @api_view(['POST'])
 @permission_classes([AllowAny, ])
@@ -43,3 +47,11 @@ def authenticate_user(request):
             return Response(res, status=status.HTTP_403_FORBIDDEN)
     except Exception as e:
         raise Http404
+
+
+class UserInfoViewSet(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        serialize = UserSerializer(request.user)
+        return Response(serialize.data, status=status.HTTP_200_OK)
