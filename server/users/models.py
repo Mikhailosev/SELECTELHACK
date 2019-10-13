@@ -7,6 +7,7 @@ from django.contrib import admin
 class User(AbstractUser):
     username = models.CharField(blank=True, null=True, max_length=300)
     email = models.EmailField(_('email address'), unique=True)
+    photo = models.TextField(default='')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
@@ -21,4 +22,3 @@ class UserProfile(models.Model):
     country = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
     zip = models.CharField(max_length=5)
-    photo = models.ImageField(upload_to='uploads', blank=True)
