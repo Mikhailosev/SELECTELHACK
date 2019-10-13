@@ -67,3 +67,17 @@ class UpdateAvatar(APIView):
         except Exception as e:
             res = {'error': 'cannot upload image'}
             return Response(res, status.HTTP_400_BAD_REQUEST)
+
+class MinusMoney(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request):
+        try:
+            user = request.user
+            user.sterling -= request.data['price']
+            user.save()
+            res = {'success': 'balance updated'}
+            return Response(res, status.HTTP_200_OK)
+        except Exception as e:
+            res = {'error': 'cannot balance update'}
+            return Response(res, status.HTTP_400_BAD_REQUEST)
