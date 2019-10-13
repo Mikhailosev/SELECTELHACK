@@ -141,4 +141,4 @@ JWT_AUTH = {
  
 }
 
-ALLOWED_HOSTS [*]
+ALLOWED_HOSTS = ['*']
