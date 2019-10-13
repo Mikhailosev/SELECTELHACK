@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../store/actions/index.js";
-
+import { NavLink } from "react-router-dom";
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +14,7 @@ class Login extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.login(this.state.email, this.state.password);
+    this.props.history.push("/tasks");
   }
   handleEmail(e) {
     this.setState({ email: e.target.value });
@@ -67,6 +68,7 @@ class Login extends Component {
                       />
                     </div>
                   </div>
+
                   <button className="button login__button is-block is-large is-fullwidth">
                     Войти <i className="fa fa-sign-in" aria-hidden="true"></i>
                   </button>

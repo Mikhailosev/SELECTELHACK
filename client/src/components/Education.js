@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import EducationSubjects from "./EducationSubjects";
 import EducationRight from "./EducationRight";
-import { connect } from "react-redux";
 
-import * as actionCreators from "../store/actions/index.js";
 class Education extends Component {
   render() {
     return (
@@ -36,18 +34,11 @@ class Education extends Component {
   }
 }
 const mapStateToProps = state => {
-  return {
-    storedUser: state.users.user
-  };
+  return {};
 };
 
 const mapDispatchToProps = dispatch => {
-  return {
-    onGetUser: user => dispatch(actionCreators.get_user(user))
-  };
+  return {};
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Education);
+export default Education;

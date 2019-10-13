@@ -51,15 +51,11 @@ class EducationSubjects extends Component {
   }
 }
 const mapStateToProps = state => {
-  return {
-    selectedCourse: state.users.selectedCourse
-  };
+  return {};
 };
 
 const mapDispatchToProps = dispatch => {
-  return {
-    onGetCourse: e => dispatch(actionCreators.select_course(e))
-  };
+  return {};
 };
 
 export default connect(

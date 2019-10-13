@@ -112,6 +112,24 @@ export default class Task extends Component {
                       suscipit tellus mauris a diam. Arcu non sodales neque
                       sodales ut etiam sit amet.
                     </p>
+                    <i
+                      style={{
+                        width: "5rem",
+                        margin: "0 auto",
+                        fontSize: "5rem",
+                        height: "5rem"
+                      }}
+                      className="fa animation fa-thumbs-up"
+                    ></i>
+                    <i
+                      style={{
+                        margin: "0 auto",
+                        width: "5rem",
+                        fontSize: "5rem",
+                        height: "5rem"
+                      }}
+                      className="fa animation fa-thumbs-down"
+                    ></i>
                   </div>
                 </div>
               </div>

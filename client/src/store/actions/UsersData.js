@@ -1,171 +1,91 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
 // Reducer functions
-export const get_tasks = () => {
-  return (dispatch, getState) => {
-    axios.get("/tasks.json").then(res => {
-      console.log(res.data);
-      dispatch(get_tasksf(res.data));
-    });
-  };
-};
-export const get_postf = post => {
-  return {
-    type: actionTypes.GET_POST,
-    post: post
-  };
-};
-export const get_post = () => {
-  return (dispatch, getState) => {
-    axios.get("/post.json").then(res => {
-      console.log(res.data);
-      dispatch(get_postf(res.data));
-    });
-  };
-};
 
-export const post_post = () => {
+export const get_items = () => {
   return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const post_like = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const post_dislike = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const post_comment = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const post_course = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const loginf = data => {
-  return {
-    type: actionTypes.GET_TASKS,
-    token: data
-  };
-};
-export const login = (email, password) => {
-  return (dispatch, getState) => {
-    let data = { email: email, password: password };
-    console.log(data);
-    fetch("http://185.91.55.98:8000/user/login/", {
-      method: "POST", // или 'PUT'
-      body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
+    axios
+      .post("products/all", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token")
+        }
+      })
       .then(res => {
         console.log(res.data);
-      })
-      .catch(err => {
-        console.log(err);
       });
-  };
-};
-export const finish_task = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      dispatch(select_coursef(res));
-    });
-  };
-};
-export const finish_unit = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const change_status = () => {
-  return (dispatch, getState) => {
-    axios.post("/post.json").then(res => {
-      console.log(res.data);
-    });
-  };
-};
-export const get_tasksf = tasks => {
-  return {
-    type: actionTypes.GET_TASKS,
-    tasks: tasks
-  };
-};
-export const select_coursef = course => {
-  console.log(course);
-  return {
-    type: actionTypes.SELECT_COURSE,
-    course: course
-  };
-};
-export const select_course = e => {
-  return (dispatch, getState) => {
-    console.log(e);
-    dispatch(select_coursef(e));
-  };
-};
-
-export const get_comments = comments => {
-  return dispatch => {
-    dispatch(get_commentsf(comments));
-  };
-};
-export const get_commentsf = comments => {
-  return {
-    type: actionTypes.GET_COMMENTS,
-    comments: comments
-  };
-};
-export const get_likes = likes => {
-  return dispatch => {
-    dispatch(get_likesf(likes));
-  };
-};
-export const get_likesf = likes => {
-  return {
-    type: actionTypes.GET_LIKES,
-    likes: likes
-  };
-};
-export const get_dislikes = dislikes => {
-  return dispatch => {
-    dispatch(get_dislikesf(dislikes));
-  };
-};
-export const get_dislikesf = dislikes => {
-  return {
-    type: actionTypes.GET_DISLIKES,
-    dislikes: dislikes
-  };
-};
-export const get_user = user => {
-  return dispatch => {
-    dispatch(get_userf(user));
   };
 };
 export const get_userf = user => {
   return {
     type: actionTypes.GET_USER,
     user: user
+  };
+};
+export const get_user = () => {
+  return (dispatch, getState) => {
+    axios
+      .get("/user/user_info", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token")
+        }
+      })
+      .then(res => {
+        dispatch(get_userf(res.data));
+      });
+  };
+};
+export const loginf = user => {
+  localStorage.setItem("token", `${user.token}`);
+  return {
+    type: actionTypes.LOGIN,
+    user: user
+  };
+};
+export const update_photo = photo => {
+  return (dispatch, getState) => {
+    axios
+      .post("/user/upload_photo/", photo, {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token")
+        }
+      })
+      .then(res => {
+        dispatch(get_user());
+      });
+  };
+};
+export const login = (email, password) => {
+  return (dispatch, getState) => {
+    let data = { email: email, password: password };
+    console.log(data);
+    axios
+      .post("http://185.91.55.98:8000/user/login/", data, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(res => {
+        if (res.status !== 200) {
+          window.location = "/login";
+        }
+        console.log(res);
+        dispatch(loginf(res.data));
+      })
+      .catch(err => {
+        window.location = "/login";
+        console.log(err);
+      });
+  };
+};
+
+export const logoutf = () => {
+  return {
+    type: actionTypes.LOGOUT,
+    logout: false
+  };
+};
+export const logout = () => {
+  return (dispatch, getState) => {
+    dispatch(logoutf());
   };
 };

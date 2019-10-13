@@ -10,7 +10,7 @@ export default class EducationTasks extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{ width: "75%" }}>
         <EducationTest></EducationTest>
       </div>
     );

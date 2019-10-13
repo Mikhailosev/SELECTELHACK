@@ -17,3 +17,5 @@ export const FINISH_UNIT = "FINISH_UNIT";
 export const CHANGE_STATUS = "CHANGE_STATUS";
 export const SELECT_COURSE = "SELECT_COURSE";
 export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+export const UPDATE_PHOTO = "UPDATE_PHOTO";

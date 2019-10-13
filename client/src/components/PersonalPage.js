@@ -97,7 +97,12 @@ export default class PersonalPage extends Component {
             <div className="column is-6">
               <div className="card events-card">
                 <header className="card-header">
-                  <p className="card-header-title">Достижения</p>
+                  <p
+                    style={{ fontSize: "2.5rem" }}
+                    className="card-header-title"
+                  >
+                    Достижения
+                  </p>
                   <a
                     href="#"
                     className="card-header-icon"
@@ -113,16 +118,93 @@ export default class PersonalPage extends Component {
                     <table className="table is-fullwidth is-striped">
                       <tbody>
                         <tr>
-                          <td width="5%">
-                            <i className="fa fa-bell-o"></i>
-                          </td>
-                          <td>Имя достижения</td>
+                          <td style={{ fontSize: "2.5rem" }}>Имя достижения</td>
                           <td>
                             <img
                               style={{
                                 borderRadius: "50%"
                               }}
                               src="https://images-na.ssl-images-amazon.com/images/I/41DmFATchgL.jpg"
+                              className="image is-32x32"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style={{ fontSize: "2.5rem" }}>
+                            Не усики а пропуск в ... Selectel
+                          </td>
+                          <td>
+                            <img
+                              style={{
+                                borderRadius: "50%"
+                              }}
+                              src="https://sun9-40.userapi.com/c856520/v856520856/7338/dHawRBYWB4o.jpg"
+                              className="image is-32x32"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style={{ fontSize: "2.5rem" }}>
+                            Введение в социофобию
+                          </td>
+                          <td>
+                            <img
+                              style={{
+                                borderRadius: "50%"
+                              }}
+                              src="https://sun9-36.userapi.com/c856520/v856520856/733f/x7DHViJlkZE.jpg"
+                              className="image is-32x32"
+                            />
+                          </td>
+                        </tr>{" "}
+                        <tr>
+                          <td style={{ fontSize: "2.5rem" }}>
+                            Слияние с гуглом
+                          </td>
+                          <td>
+                            <img
+                              style={{
+                                borderRadius: "50%"
+                              }}
+                              src="https://sun9-70.userapi.com/c856520/v856520856/7346/8c1QEYWUeHA.jpg"
+                              className="image is-32x32"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style={{ fontSize: "2.5rem" }}>Рядовой Куча</td>
+                          <td>
+                            <img
+                              style={{
+                                borderRadius: "50%"
+                              }}
+                              src="https://sun9-7.userapi.com/c856520/v856520856/734d/YDEEg1pQ9rc.jpg"
+                              className="image is-32x32"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style={{ fontSize: "2.5rem" }}>Born to feel</td>
+                          <td>
+                            <img
+                              style={{
+                                borderRadius: "50%"
+                              }}
+                              src="https://sun9-6.userapi.com/c856520/v856520856/7354/fIYuq_fQrR4.jpg"
+                              className="image is-32x32"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style={{ fontSize: "2.5rem" }}>
+                            English motherlover, do you speak it?
+                          </td>
+                          <td>
+                            <img
+                              style={{
+                                borderRadius: "50%"
+                              }}
+                              src="https://sun9-42.userapi.com/c856520/v856520856/732a/vE10VXgYeeY.jpg"
                               className="image is-32x32"
                             />
                           </td>
@@ -135,7 +217,9 @@ export default class PersonalPage extends Component {
             </div>
             <div className="column is-6">
               <div className="card">
-                <header className="card-header">React</header>
+                <header style={{ fontSize: "2.5rem" }} className="card-header">
+                  React
+                </header>
                 <div className="card-content">
                   <div className="content">
                     <div className="control has-icons-left has-icons-right">
@@ -147,7 +231,9 @@ export default class PersonalPage extends Component {
                 </div>
               </div>
               <div className="card">
-                <header className="card-header">Html</header>
+                <header style={{ fontSize: "2.5rem" }} className="card-header">
+                  Html
+                </header>
                 <div className="card-content">
                   <div className="content">
                     <div className="control has-icons-left has-icons-right">

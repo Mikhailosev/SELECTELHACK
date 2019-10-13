@@ -10,13 +10,19 @@ import Shop from "./components/Shop";
 import PersonalPage from "./components/PersonalPage";
 import Item from "./components/Item";
 import Education from "./components/Education";
+import { connect } from "react-redux";
+import * as actionCreators from "./store/actions/index.js";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { loggedIn: false };
   }
 
-  unCheck() {
+  unCheck(e) {
+    if (e === "token") {
+      localStorage.removeItem("token");
+      this.props.logout();
+    }
     let ref = "ref_";
     if (this.refs[ref].checked === true) {
       this.refs[ref].checked = false;
@@ -27,11 +33,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.loggedIn ? (
+        {localStorage.getItem("token") && this.props.loggedIn ? (
           <div>
             <div id="navigation" className="navigation">
               <div className="navigation__avatar">
-                <img src="https://s2.cdn.teleprogramma.pro/wp-content/uploads/2018/06/54aedcb5033553e2342843bf8b94e8aa.jpg" />
+                <img src="https://www.remove.bg/images/samples/combined/s1.jpg" />
               </div>
             </div>
             <div id="navigation" className="navigation">
@@ -41,7 +47,6 @@ class App extends Component {
                 id="navi-toggle"
                 className="navigation__checkbox"
               />
-
               <label for="navi-toggle" className="navigation__button">
                 <a className="navigation__icon">&nbsp;</a>
               </label>
@@ -114,12 +119,25 @@ class App extends Component {
                       Проверять задания
                     </NavLink>
                   </li>
+                  <li className="navigation__item">
+                    <NavLink
+                      onClick={() => this.unCheck("token")}
+                      className="navigation__link"
+                      style={{ textDecoration: "none" }}
+                      to="/login"
+                    >
+                      <span>
+                        <i class="fa fa-long-arrow-alt-left"></i>{" "}
+                      </span>
+                      Выход
+                    </NavLink>
+                  </li>
                 </ul>
               </nav>
             </div>
           </div>
         ) : null}
-        {this.state.loggedIn ? (
+        {localStorage.getItem("token") ? (
           <Redirect to="/tasks" />
         ) : (
           <Redirect to="/login" />
@@ -139,4 +157,22 @@ class App extends Component {
     );
   }
 }
-export default App;
+const mapStateToProps = state => {
+  return {
+    token: state.users.token,
+    loggedIn: state.users.loggedIn,
+    user: state.users.user
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onGetUser: user => dispatch(actionCreators.get_user(user)),
+    logout: () => dispatch(actionCreators.logout())
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

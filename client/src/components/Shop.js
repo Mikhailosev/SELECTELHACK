@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 export default class Shop extends Component {
   render() {
     return (
@@ -55,39 +54,31 @@ export default class Shop extends Component {
                   <div className="card-image">
                     <figure className="image">
                       <img
-                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        src="https://sun9-21.userapi.com/c857028/v857028856/72aa/S7lltBQqIO0.jpg"
                         alt="Image"
                       />
                     </figure>
                   </div>
                   <div className="card-content">
                     <div className="media">
-                      <div className="media-left">
-                        <figure className="image is-96x96">
-                          <img
-                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
-                            alt="Image"
-                          />
-                        </figure>
-                      </div>
+                      <div className="media-left"></div>
                       <div className="media-content">
-                        <p className="title is-4 no-padding">Okinami</p>
+                        <p
+                          style={{ fontSize: "2.5rem" }}
+                          className="title is-4 no-padding"
+                        >
+                          Сертификат ЛитРес
+                        </p>
                         <p>
                           <span className="title is-6">
-                            <a href="http://twitter.com/#">@twitterid</a>
+                            <a
+                              style={{ fontSize: "2.5rem" }}
+                              href="http://twitter.com/#"
+                            >
+                              Цена: 500 тирлингов
+                            </a>
                           </span>
                         </p>
-                        <p className="subtitle is-6">Lead Developer</p>
-                      </div>
-                    </div>
-                    <div className="content">
-                      The Beast stumbled in the dark for it could no longer see
-                      the path. It started to fracture and weaken, trying to
-                      reshape itself into the form of metal. Even the witches
-                      would no longer lay eyes upon it, for it had become
-                      hideous and twisted.
-                      <div className="background-icon">
-                        <span className="icon-twitter"></span>
                       </div>
                     </div>
                   </div>
@@ -104,39 +95,31 @@ export default class Shop extends Component {
                   <div className="card-image">
                     <figure className="image">
                       <img
-                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        src="https://sun9-5.userapi.com/c857028/v857028856/72b1/qLGkWNbCAm0.jpg"
                         alt="Image"
                       />
                     </figure>
                   </div>
                   <div className="card-content">
                     <div className="media">
-                      <div className="media-left">
-                        <figure className="image is-96x96">
-                          <img
-                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
-                            alt="Image"
-                          />
-                        </figure>
-                      </div>
+                      <div className="media-left"></div>
                       <div className="media-content">
-                        <p className="title is-4 no-padding">Okinami</p>
+                        <p
+                          style={{ fontSize: "2.5rem" }}
+                          className="title is-4 no-padding"
+                        >
+                          Портфель портфель
+                        </p>
                         <p>
                           <span className="title is-6">
-                            <a href="http://twitter.com/#">@twitterid</a>
+                            <a
+                              style={{ fontSize: "2.5rem" }}
+                              href="http://twitter.com/#"
+                            >
+                              Цена: 1700 тирлингов
+                            </a>
                           </span>
                         </p>
-                        <p className="subtitle is-6">Lead Developer</p>
-                      </div>
-                    </div>
-                    <div className="content">
-                      The Beast stumbled in the dark for it could no longer see
-                      the path. It started to fracture and weaken, trying to
-                      reshape itself into the form of metal. Even the witches
-                      would no longer lay eyes upon it, for it had become
-                      hideous and twisted.
-                      <div className="background-icon">
-                        <span className="icon-twitter"></span>
                       </div>
                     </div>
                   </div>
@@ -152,39 +135,31 @@ export default class Shop extends Component {
                   <div className="card-image">
                     <figure className="image">
                       <img
-                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        src="https://sun9-53.userapi.com/c857028/v857028856/72b8/olIGbIC-r9g.jpg"
                         alt="Image"
                       />
                     </figure>
                   </div>
                   <div className="card-content">
                     <div className="media">
-                      <div className="media-left">
-                        <figure className="image is-96x96">
-                          <img
-                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
-                            alt="Image"
-                          />
-                        </figure>
-                      </div>
+                      <div className="media-left"></div>
                       <div className="media-content">
-                        <p className="title is-4 no-padding">Okinami</p>
+                        <p
+                          style={{ fontSize: "2.5rem" }}
+                          className="title is-4 no-padding"
+                        >
+                          Свитшот
+                        </p>
                         <p>
                           <span className="title is-6">
-                            <a href="http://twitter.com/#">@twitterid</a>
+                            <a
+                              style={{ fontSize: "2.5rem" }}
+                              href="http://twitter.com/#"
+                            >
+                              Цена: 1500 тирлингов
+                            </a>
                           </span>
                         </p>
-                        <p className="subtitle is-6">Lead Developer</p>
-                      </div>
-                    </div>
-                    <div className="content">
-                      The Beast stumbled in the dark for it could no longer see
-                      the path. It started to fracture and weaken, trying to
-                      reshape itself into the form of metal. Even the witches
-                      would no longer lay eyes upon it, for it had become
-                      hideous and twisted.
-                      <div className="background-icon">
-                        <span className="icon-twitter"></span>
                       </div>
                     </div>
                   </div>
@@ -200,39 +175,106 @@ export default class Shop extends Component {
                   <div className="card-image">
                     <figure className="image">
                       <img
-                        src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop="
+                        src="https://sun9-34.userapi.com/c857028/v857028856/72bf/nzz7nHO4KXo.jpg"
                         alt="Image"
                       />
                     </figure>
                   </div>
                   <div className="card-content">
                     <div className="media">
-                      <div className="media-left">
-                        <figure className="image is-96x96">
-                          <img
-                            src="https://i.imgsafe.org/a4/a4bb9acc5e.jpeg"
-                            alt="Image"
-                          />
-                        </figure>
-                      </div>
+                      <div className="media-left"></div>
                       <div className="media-content">
-                        <p className="title is-4 no-padding">Okinami</p>
+                        <p
+                          style={{ fontSize: "2.5rem" }}
+                          className="title is-4 no-padding"
+                        >
+                          Лонгслив
+                        </p>
                         <p>
                           <span className="title is-6">
-                            <a href="http://twitter.com/#">@twitterid</a>
+                            <a
+                              style={{ fontSize: "2.5rem" }}
+                              href="http://twitter.com/#"
+                            >
+                              Цена: 1000 тирлингов
+                            </a>
                           </span>
                         </p>
-                        <p className="subtitle is-6">Lead Developer</p>
                       </div>
                     </div>
-                    <div className="content">
-                      The Beast stumbled in the dark for it could no longer see
-                      the path. It started to fracture and weaken, trying to
-                      reshape itself into the form of metal. Even the witches
-                      would no longer lay eyes upon it, for it had become
-                      hideous and twisted.
-                      <div className="background-icon">
-                        <span className="icon-twitter"></span>
+                  </div>
+                </div>
+              </NavLink>
+              <NavLink
+                onClick={() => this.unCheck()}
+                className="column is-one-third"
+                style={{ textDecoration: "none" }}
+                to="/singleItem"
+              >
+                <div className="card large">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img
+                        src="https://sun9-59.userapi.com/c857028/v857028856/72cd/hU-V9aQmKO8.jpg"
+                        alt="Image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-left"></div>
+                      <div className="media-content">
+                        <p className="title is-4 no-padding">Чехол</p>
+                        <p>
+                          <span className="title is-6">
+                            <a
+                              style={{ fontSize: "2.5rem" }}
+                              href="http://twitter.com/#"
+                            >
+                              Цена: 500 тирлингов
+                            </a>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </NavLink>
+              <NavLink
+                onClick={() => this.unCheck()}
+                className="column is-one-third"
+                style={{ textDecoration: "none" }}
+                to="/singleItem"
+              >
+                <div className="card large">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img
+                        src="  https://sun9-52.userapi.com/c857028/v857028856/72c6/_JNXhv7UcRU.jpg"
+                        alt="Image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="media">
+                      <div className="media-left"></div>
+                      <div className="media-content">
+                        <p
+                          style={{ fontSize: "2.5rem" }}
+                          className="title is-4 no-padding"
+                        >
+                          Озон
+                        </p>
+                        <p>
+                          <span className="title is-6">
+                            <a
+                              style={{ fontSize: "2.5rem" }}
+                              href="http://twitter.com/#"
+                            >
+                              Цена: 500 тирлингов
+                            </a>
+                          </span>
+                        </p>
                       </div>
                     </div>
                   </div>

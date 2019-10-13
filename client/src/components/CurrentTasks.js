@@ -23,7 +23,10 @@ export default class CurrentTasks extends Component {
             style={{ borderRadius: "50%", margin: "2rem" }}
             src="https://pbs.twimg.com/profile_images/806143150414819329/FoOizLFS.jpg"
           />
-          <h1 style={{ color: "white" }} class="title tasks__title is-1">
+          <h1
+            style={{ color: "white", fontSize: "2.5rem" }}
+            class="title tasks__title is-1"
+          >
             Текущие задачи
           </h1>
         </div>
@@ -40,9 +43,30 @@ export default class CurrentTasks extends Component {
               marginRight: "5px"
             }}
           >
-            <p>
-              <strong>Название задачи</strong>
-            </p>
+            <div
+              className="is-info"
+              style={{ fontSize: "2rem", color: "white" }}
+            >
+              <strong>Задача 1</strong>
+            </div>
+            <div
+              className="is-danger"
+              style={{ fontSize: "2rem", color: "black" }}
+            >
+              <strong>Задача 2</strong>
+            </div>
+            <div className="is-warning" style={{ fontSize: "2rem" }}>
+              <strong>Задача 3</strong>
+            </div>
+            <div style={{ fontSize: "2rem" }}>
+              <strong>Задача 4</strong>
+            </div>
+            <div
+              className="is-warning"
+              style={{ fontSize: "2rem", color: "white" }}
+            >
+              <strong>Задача 5</strong>
+            </div>
           </div>
           <div
             style={{
