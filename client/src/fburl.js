@@ -1,2 +1,2 @@
-const fburl = "localhost:8000";
+const fburl = "http://localhost:8000";
 export default fburl;
