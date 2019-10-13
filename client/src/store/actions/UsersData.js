@@ -73,7 +73,6 @@ export const login = (email, password) => {
       method: "POST", // или 'PUT'
       body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
       headers: {
-        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json"
       }
     })
